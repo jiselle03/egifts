@@ -6,6 +6,12 @@ Rails.application.routes.draw do
         get :current, on: :collection
       end
       resource :session, only: [:create, :destroy]
+
+      resources :stores, except: [:new, :edit] do
+        resources :items, except: [:new, :edit, :index] do
+          resources :transactions, shallow: true, only: [:create]
+        end
+      end
     end
   end
 end
