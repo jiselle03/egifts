@@ -10,6 +10,7 @@ class CreateStores < ActiveRecord::Migration[6.0]
       t.string :country
       t.string :postal_code
       t.string :category
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
