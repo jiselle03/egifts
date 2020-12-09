@@ -27,9 +27,5 @@ class Ability
     can(:purchase, Item) do |item|
       user.persisted?
     end
-
-    can(:destroy, Transaction) do |transaction|
-      transaction.user = user
-    end
   end
 end
