@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_215516) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.decimal "price"
+    t.decimal "price", precision: 8, scale: 2
     t.boolean "availability"
     t.text "description"
     t.string "customization"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_215516) do
     t.string "email"
     t.string "phone_number"
     t.string "password_digest"
-    t.string "is_admin"
+    t.boolean "is_admin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
