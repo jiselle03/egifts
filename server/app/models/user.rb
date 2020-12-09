@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    # has_many :roles, dependent: :destroy
-    # has_many :purchased_items, through: :transactions, source: :item
+    has_many :stores, dependent: :destroy
+    has_many :purchased_items, through: :transactions, source: :item
 
     validates :first_name, presence: true
     validates :last_name, presence: true
