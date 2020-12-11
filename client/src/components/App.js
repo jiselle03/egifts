@@ -20,6 +20,7 @@ import GlobalStyles from '../global/global';
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const getUser = useCallback(() => {
     User.current().then(user => {
@@ -37,9 +38,11 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <GlobalStyles />
+        <GlobalStyles open={open} />
 
         <NavBar 
+          open={open}
+          setOpen={setOpen}
           currentUser={currentUser} 
           onSignOut={destroySession} 
         />

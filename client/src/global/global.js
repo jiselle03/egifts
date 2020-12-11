@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -10,13 +11,19 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  body, #root, main {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.primary};
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     min-height: 100vh;
+    width: 100vw;
     text-rendering: optimizeLegibility;
+  }
+  
+  main {
+    width: calc(100% - ${({ theme, open }) => open ? theme.drawer : "0"});
+    margin-left: ${({ theme, open }) => open ? theme.drawer : "0"};
   }
 
   h1 {
