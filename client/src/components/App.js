@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { bool, func, object } from 'prop-types';
 
 import User from '../api/user';
 import Session from '../api/session';
