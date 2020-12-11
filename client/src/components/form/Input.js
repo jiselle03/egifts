@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-    width: 100%;
+    width: ${({ half }) => half ? "45%" : "100%"};
     height: 40px;
-    margin: 0.5rem 0;
+    margin: 0.5rem;
 `;
 
 export default Input;
