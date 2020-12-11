@@ -5,7 +5,7 @@ import Menu from './Menu';
 import useOnClickOutside from './hooks';
 
 const NavBar = props => {
-    const { currentUser } = props; 
+    const { currentUser, onSignOut } = props; 
 
     const [open, setOpen] = useState(false);
 
@@ -15,7 +15,7 @@ const NavBar = props => {
     return (
         <header ref={node}>
             <Burger open={open} setOpen={setOpen} />
-            <Menu open={open} />
+            <Menu open={open} currentUser={currentUser} handleSignOut={onSignOut} />
         </header>
     );
 };

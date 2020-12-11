@@ -7,15 +7,22 @@ import { bool } from 'prop-types';
 import Button from '../Button';
 
 const Menu = props => {
-    const { open } = props;
+    const { open, currentUser, handleSignOut } = props;
 
     return (
         <StyledMenu open={open}>
             <div>
                 <h1>eGifts</h1>
                 <div>
-                    <Link to="/sign-in"><Button>Sign In</Button></Link>
-                    <Link to="/sign-up"><Button>Sign Up</Button></Link>
+                    {currentUser && (
+                        <Button onClick={handleSignOut}>Sign Out</Button>
+                    )}
+                    {!currentUser && (
+                        <>
+                            <Link to="/sign-in"><Button>Sign In</Button></Link>
+                            <Link to="/sign-up"><Button>Sign Up</Button></Link>
+                        </>
+                    )}
                 </div>
             </div>
 
