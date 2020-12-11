@@ -47,6 +47,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   background: ${({ theme }) => theme.background};
   height: 100vh;
+  width: ${({ theme }) => theme.drawer};
   text-align: left;
   position: absolute;
   top: 0;
@@ -68,10 +69,6 @@ const StyledMenu = styled.nav`
     justify-content: center;
   }
 
-  h1, h2, ul {
-    padding: 0 2rem;
-  }
-
   h1 {
     color: ${({ theme }) => theme.background};
     text-align: right;
@@ -80,11 +77,17 @@ const StyledMenu = styled.nav`
 
   h2 {
     text-transform: uppercase;
+    
+  }
+
+  h2, ul {
+    margin: 1rem 1.5rem 0rem 1.5rem;
+    padding: 0;
   }
 
   li {
     list-style: none;
-    padding: 1rem 0;
+    line-height: 2.5rem;
   }
 
   a {
@@ -103,4 +106,4 @@ const StyledMenu = styled.nav`
       color: ${({ theme }) => theme.primaryHover};
     }
   }
-`;
+`;  

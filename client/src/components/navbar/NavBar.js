@@ -1,15 +1,16 @@
 import React, { useState, useRef } from 'react';
 
+import styled from 'styled-components';
+
 import Burger from './Burger';
 import Menu from './Menu';
 import useOnClickOutside from './hooks';
 
 const NavBar = props => {
-    const { currentUser, onSignOut } = props; 
-
-    const [open, setOpen] = useState(false);
+    const { open, setOpen, currentUser, onSignOut } = props; 
 
     const node = useRef(); 
+
     useOnClickOutside(node, () => setOpen(false));
 
     return (
