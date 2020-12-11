@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { bool, func, object } from 'prop-types';
 
 import User from '../api/user';
 import Session from '../api/session';
@@ -62,6 +63,15 @@ const App = () => {
       </BrowserRouter>
     </ThemeProvider>
   );
-}
+};
+
+App.propTypes = {
+  open: bool.isRequired,
+  setOpen: func.isRequired,
+  currentUser: object,
+  onSignIn: func.isRequired,
+  onSignUp: func.isRequired,
+  onSignOut: func.isRequired,
+};
 
 export default App;

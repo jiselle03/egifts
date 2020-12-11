@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { func } from 'prop-types';
 
 import Session from '../../api/session';
 
@@ -39,6 +40,10 @@ const SignInPage = props => {
             </Form>
         </main>
     );
+};
+
+SignInPage.propTypes = {
+    onSignIn: func.isRequired,
 };
 
 export default SignInPage;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
-import { bool } from 'prop-types';
+import { bool, func, object } from 'prop-types';
 
 import Button from '../Button';
 
@@ -38,6 +37,8 @@ const Menu = props => {
 
 Menu.propTypes = {
     open: bool.isRequired,
+    currentUser: object,
+    handleSignOut: func.isRequired,
 };
 
 export default Menu;

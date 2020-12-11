@@ -1,6 +1,4 @@
-import React, { useState, useRef } from 'react';
-
-import styled from 'styled-components';
+import React, { useRef } from 'react';
 
 import Burger from './Burger';
 import Menu from './Menu';
