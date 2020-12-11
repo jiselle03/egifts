@@ -33,16 +33,14 @@ const SignInPage = props => {
     };
 
     return (
-        <main>
-            <Form onSubmit={createSession}>
-                <Input type="email" name="email" placeholder="Email" />
-                <Input type="password" name="password" placeholder="Password" />
+        <Form onSubmit={createSession}>
+            <Input type="email" name="email" placeholder="Email" />
+            <Input type="password" name="password" placeholder="Password" />
 
-                <Button primary type="submit">Sign In</Button>
+            <Button primary type="submit">Sign In</Button>
 
-                Don't have an account? <Link to='/sign-up' className={global.link}>SIGN UP</Link>.
-            </Form>
-        </main>
+            Don't have an account? <Link to='/sign-up' className={global.link}>SIGN UP</Link>.
+        </Form>
     );
 };
 

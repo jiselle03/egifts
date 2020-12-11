@@ -35,20 +35,18 @@ const SignUpPage = props => {
     };
 
     return (
-        <main>
-            <Form onSubmit={createUser}>
-                <Input type="text" name="first_name" placeholder="First Name" half />
-                <Input type="text" name="last_name" placeholder="Last Name" half />
-                <Input type="email" name="email" placeholder="Email" half />
-                <Input type="tel" name="phone_number" placeholder="Phone Number" half />
-                <Input type="password" name="password" placeholder="Password" half />
-                <Input type="password" name="password_confirmation" placeholder="Password Confirmation" half />
+        <Form onSubmit={createUser}>
+            <Input type="text" name="first_name" placeholder="First Name" half />
+            <Input type="text" name="last_name" placeholder="Last Name" half />
+            <Input type="email" name="email" placeholder="Email" half />
+            <Input type="tel" name="phone_number" placeholder="Phone Number" half />
+            <Input type="password" name="password" placeholder="Password" half />
+            <Input type="password" name="password_confirmation" placeholder="Password Confirmation" half />
 
-                <Button primary type="submit">Sign Up</Button>
+            <Button primary type="submit">Sign Up</Button>
 
-                Already have an account? <Link to='/sign-in' className={global.link}>SIGN IN</Link>.
-            </Form>
-        </main>
+            Already have an account? <Link to='/sign-in' className={global.link}>SIGN IN</Link>.
+        </Form>
     );
 };
 

@@ -5,6 +5,7 @@ import User from '../api/user';
 import Session from '../api/session';
 
 import AuthRoute from './AuthRoute';
+import Container from './Container';
 import LoadingCircle from './LoadingCircle';
 import NavBar from './navbar/NavBar';
 
@@ -47,18 +48,20 @@ const App = () => {
           onSignOut={destroySession} 
         />
 
-        <Switch>
-          <Route exact path='/' component={WelcomePage}/>
-          <Route 
-            path='/sign-in'
-            render={routeProps => <SignInPage {...routeProps} onSignIn={getUser} />}  
-          />
-          <Route 
-            path='/sign-up'
-            render={routeProps => <SignUpPage {...routeProps} onSignUp={getUser} />}  
-          />
-          <Route component={NotFoundPage} />
-        </Switch>
+        <Container open={open}>
+          <Switch>
+            <Route exact path='/' component={WelcomePage}/>
+            <Route 
+              path='/sign-in'
+              render={routeProps => <SignInPage {...routeProps} onSignIn={getUser} />}  
+            />
+            <Route 
+              path='/sign-up'
+              render={routeProps => <SignUpPage {...routeProps} onSignUp={getUser} />}  
+            />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </Container>
       </BrowserRouter>
     </ThemeProvider>
   );
