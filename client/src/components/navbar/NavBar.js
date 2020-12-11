@@ -5,6 +5,8 @@ import Menu from './Menu';
 import useOnClickOutside from './hooks';
 
 const NavBar = props => {
+    const { currentUser } = props; 
+
     const [open, setOpen] = useState(false);
 
     const node = useRef(); 

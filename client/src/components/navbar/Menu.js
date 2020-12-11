@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 import { bool } from 'prop-types';
+
+import Button from '../Button';
 
 const Menu = props => {
     const { open } = props;
@@ -10,6 +13,10 @@ const Menu = props => {
         <StyledMenu open={open}>
             <div>
                 <h1>eGifts</h1>
+                <div>
+                    <Link to="/sign-in"><Button>Sign In</Button></Link>
+                    <Link to="/sign-up"><Button>Sign Up</Button></Link>
+                </div>
             </div>
 
             <h2>Categories</h2>
@@ -39,18 +46,23 @@ const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-  background-color: ${({ theme }) => theme.border};
+  background-color: ${({ theme }) => theme.secondary};
   
   @media (max-width: ${({ theme }) => theme.medium}) {
     width: 100%;
   }
 
   div {
-      background: ${({ theme }) => theme.accent};
+    background: ${({ theme }) => theme.accent};
+  }
+
+  div div {
+    display: flex;
+    justify-content: center;
   }
 
   h1, h2, ul {
-      padding: 0 2rem;
+    padding: 0 2rem;
   }
 
   h1 {
