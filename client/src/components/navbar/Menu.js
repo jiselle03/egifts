@@ -89,7 +89,7 @@ const StyledMenu = styled.nav`
     transition: color 0.3s linear;
     
     @media (max-width: ${({ theme }) => theme.medium}) {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
 
     &:hover {
