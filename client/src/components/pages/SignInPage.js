@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { func } from 'prop-types';
 
 import Session from '../../api/session';
@@ -8,7 +9,7 @@ import Input from '../form/Input';
 import Button from '../Button';
 
 const SignInPage = props => {
-    const { onSignIn } = props;
+    const { onSignIn, history } = props;
 
     const [errors, setErrors] = useState([]);
 
@@ -26,7 +27,7 @@ const SignInPage = props => {
                 setErrors([...errors, { message: "Wrong email or password"}]);
             } else {
                 if (typeof onSignIn === "function") onSignIn();
-                props.history.push("/");
+                history.push("/");
             };
         });
     };
@@ -36,7 +37,10 @@ const SignInPage = props => {
             <Form onSubmit={createSession}>
                 <Input type="email" name="email" placeholder="Email" />
                 <Input type="password" name="password" placeholder="Password" />
+
                 <Button primary type="submit">Sign In</Button>
+
+                Don't have an account? <Link to='/sign-up' className={global.link}>SIGN UP</Link>.
             </Form>
         </main>
     );
