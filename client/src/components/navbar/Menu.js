@@ -108,3 +108,8 @@ const StyledMenu = styled.nav`
     }
   }
 `;  
+
+Menu.propTypes = {
+  theme: object,
+  open: bool.isRequired,
+};

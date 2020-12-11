@@ -63,3 +63,8 @@ const StyledBurger = styled.button`
     }
   }
 `;
+
+Burger.propTypes = {
+  theme: object,
+  open: bool.isRequired,
+};

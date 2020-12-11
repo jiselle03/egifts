@@ -65,13 +65,4 @@ const App = () => {
   );
 };
 
-App.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired,
-  currentUser: object,
-  onSignIn: func.isRequired,
-  onSignUp: func.isRequired,
-  onSignOut: func.isRequired,
-};
-
 export default App;

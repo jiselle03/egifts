@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import theme from './theme';
+import { bool, object } from 'prop-types';
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -34,5 +34,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 2.5rem;
   }
   `;
+
+GlobalStyles.propTypes = {
+  theme: object,
+  open: bool.isRequired,
+};
 
   export default GlobalStyles;

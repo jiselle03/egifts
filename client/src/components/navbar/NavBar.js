@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { bool, func, object } from 'prop-types';
 
 import Burger from './Burger';
 import Menu from './Menu';
@@ -17,6 +18,13 @@ const NavBar = props => {
             <Menu open={open} currentUser={currentUser} handleSignOut={onSignOut} />
         </header>
     );
+};
+
+NavBar.propTypes = {
+    open: bool.isRequired,
+    setOpen: func.isRequired,
+    currentUser: object,
+    onSignOut: func.isRequired,
 };
 
 export default NavBar;
