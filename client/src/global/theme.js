@@ -6,6 +6,7 @@ const theme = {
     accent: "#FF6F61", // orange
     medium: "768px",
     large: "992px",
+    drawer: "300px",
 };
 
 export default theme;
