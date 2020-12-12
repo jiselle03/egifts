@@ -20,7 +20,7 @@ const SignUpPage = props => {
                 first_name: fd.get("first_name"),
                 last_name: fd.get("last_name"),
                 email: fd.get("email"),
-                phone: fd.get("phone_number"),
+                phone_number: fd.get("phone_number"),
                 password: fd.get("password"),
                 password_confirmation: fd.get("password_confirmation")
             }
