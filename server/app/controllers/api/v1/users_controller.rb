@@ -29,7 +29,7 @@ class Api::V1::UsersController < ApplicationController
         :first_name, 
         :last_name,
         :email,
-        :phone,
+        :phone_number,
         :password,
         :password_confirmation
         )
