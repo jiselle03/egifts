@@ -14,6 +14,7 @@ import WelcomePage from './pages/WelcomePage';
 import SignInPage from './pages/account/SignInPage';
 import SignUpPage from './pages/account/SignUpPage';
 import EntertainmentPage from './pages/categories/EntertainmentPage';
+import FoodDrinksPage from './pages/categories/FoodDrinksPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import { ThemeProvider } from 'styled-components';
@@ -64,7 +65,7 @@ const App = () => {
               render={routeProps => <SignUpPage {...routeProps} onSignUp={getUser} />}  
             />
             <Route path='/entertainment' component={EntertainmentPage} />
-            <Route path='/food-and-drinks' />
+            <Route path='/food-and-drinks' component={FoodDrinksPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </Container>

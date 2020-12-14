@@ -7,12 +7,12 @@ import Utils from './utils';
 import Card from '../../grid/Card';
 import Grid from '../../grid/Grid';
 
-const EntertainmentPage = () => {
+const FoodDrinksPage = () => {
     const { filterStores } = Utils;
     const [stores, setStores] = useState([]);
 
     useEffect(() => {
-        Store.all().then(stores => setStores(filterStores(stores, "Entertainment")));
+        Store.all().then(stores => setStores(filterStores(stores, "Food & Drinks")));
     }, []);
 
     return (
@@ -28,4 +28,4 @@ const EntertainmentPage = () => {
     );
 };
 
-export default EntertainmentPage;
+export default FoodDrinksPage;
