@@ -5,7 +5,7 @@ import Burger from './Burger';
 import Menu from './Menu';
 import useOnClickOutside from './hooks';
 
-const NavBar = props => {
+const Header = props => {
     const { open, setOpen, currentUser, onSignOut } = props; 
 
     const node = useRef(); 
@@ -20,11 +20,11 @@ const NavBar = props => {
     );
 };
 
-NavBar.propTypes = {
+Header.propTypes = {
     open: bool.isRequired,
     setOpen: func.isRequired,
     currentUser: object,
     onSignOut: func.isRequired,
 };
 
-export default NavBar;
+export default Header;
