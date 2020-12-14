@@ -7,11 +7,13 @@ import Session from '../api/session';
 import AuthRoute from './AuthRoute';
 import Container from './Container';
 import LoadingCircle from './LoadingCircle';
-import NavBar from './navbar/NavBar';
+import Header from './navbar/Header';
+import Title from './Title';
 
 import WelcomePage from './pages/WelcomePage';
-import SignInPage from './pages/SignInPage';
-import SignUpPage from './pages/SignUpPage';
+import SignInPage from './pages/account/SignInPage';
+import SignUpPage from './pages/account/SignUpPage';
+import EntertainmentPage from './pages/categories/EntertainmentPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import { ThemeProvider } from 'styled-components';
@@ -40,8 +42,10 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <GlobalStyles open={open} />
+        
+        <Title>eGifts</Title>
 
-        <NavBar 
+        <Header 
           open={open}
           setOpen={setOpen}
           currentUser={currentUser} 
@@ -50,7 +54,7 @@ const App = () => {
 
         <Container open={open}>
           <Switch>
-            <Route exact path='/' component={WelcomePage}/>
+            <Route exact path='/' component={WelcomePage} />
             <Route 
               path='/sign-in'
               render={routeProps => <SignInPage {...routeProps} onSignIn={getUser} />}  
@@ -59,6 +63,8 @@ const App = () => {
               path='/sign-up'
               render={routeProps => <SignUpPage {...routeProps} onSignUp={getUser} />}  
             />
+            <Route path='/entertainment' component={EntertainmentPage} />
+            <Route path='/food-and-drinks' />
             <Route component={NotFoundPage} />
           </Switch>
         </Container>
