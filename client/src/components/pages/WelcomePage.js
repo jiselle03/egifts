@@ -11,14 +11,13 @@ const WelcomePage = () => {
 
     useEffect(() => {
         Store.all().then(stores => setStores(stores));
-        console.log(stores)
     }, []);
 
     return (
         <Grid>
             {stores.map(store => (
-                <Card>
-                    <Link key={store.id} to={`/stores/${store.id}`}>
+                <Card key={store.id}>
+                    <Link to={`/stores/${store.id}`}>
                         {store.name}
                     </Link>
                 </Card>
