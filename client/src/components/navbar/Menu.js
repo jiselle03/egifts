@@ -27,8 +27,8 @@ const Menu = props => {
 
             <h2>Categories</h2>
             <ul>
-                <li><a href="/">Entertainment</a></li>
-                <li><a href="/">Food & Drinks</a></li>
+                <li><a href="/entertainment">Entertainment</a></li>
+                <li><a href="/food-and-drinks">Food & Drinks</a></li>
             </ul>
         </StyledMenu>
         
