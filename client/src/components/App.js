@@ -15,6 +15,7 @@ import SignInPage from './pages/account/SignInPage';
 import SignUpPage from './pages/account/SignUpPage';
 import EntertainmentPage from './pages/categories/EntertainmentPage';
 import FoodDrinksPage from './pages/categories/FoodDrinksPage';
+import StoreShowPage from './pages/StoreShowPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import { ThemeProvider } from 'styled-components';
@@ -66,6 +67,7 @@ const App = () => {
             />
             <Route path='/entertainment' component={EntertainmentPage} />
             <Route path='/food-and-drinks' component={FoodDrinksPage} />
+            <Route path='/stores/:id' component={StoreShowPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </Container>
