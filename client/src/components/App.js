@@ -68,7 +68,7 @@ const App = () => {
             />
             <Route path='/entertainment' component={EntertainmentPage} />
             <Route path='/food-and-drinks' component={FoodDrinksPage} />
-            <Route path='health-and-beauty' component={HealthBeautyPage} />
+            <Route path='/health-and-beauty' component={HealthBeautyPage} />
             <Route path='/stores/:id' component={StoreShowPage} />
             <Route component={NotFoundPage} />
           </Switch>
