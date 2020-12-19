@@ -13,6 +13,7 @@ import Title from './Title';
 import WelcomePage from './pages/WelcomePage';
 import SignInPage from './pages/account/SignInPage';
 import SignUpPage from './pages/account/SignUpPage';
+import AccountShowPage from './pages/account/AccountShowPage';
 import EntertainmentPage from './pages/categories/EntertainmentPage';
 import FoodDrinksPage from './pages/categories/FoodDrinksPage';
 import HealthBeautyPage from './pages/categories/HealthBeautyPage';
@@ -65,6 +66,11 @@ const App = () => {
             <Route 
               path='/sign-up'
               render={routeProps => <SignUpPage {...routeProps} onSignUp={getUser} />}  
+            />
+            <AuthRoute 
+              exact path='/account'
+              isAuthenticated={!!currentUser}
+              render={routeProps => <AccountShowPage {...routeProps} currentUser={currentUser} />}
             />
             <Route path='/entertainment' component={EntertainmentPage} />
             <Route path='/food-and-drinks' component={FoodDrinksPage} />

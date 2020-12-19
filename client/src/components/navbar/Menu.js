@@ -14,13 +14,16 @@ const Menu = props => {
                 <h1>eGifts</h1>
                 <div>
                     {currentUser && (
+                      <>
+                        <Link to="/account"><Button>Account</Button></Link>
                         <Button onClick={handleSignOut}>Sign Out</Button>
+                      </>
                     )}
                     {!currentUser && (
-                        <>
-                            <Link to="/sign-in"><Button>Sign In</Button></Link>
-                            <Link to="/sign-up"><Button>Sign Up</Button></Link>
-                        </>
+                      <>
+                          <Link to="/sign-in"><Button>Sign In</Button></Link>
+                          <Link to="/sign-up"><Button>Sign Up</Button></Link>
+                      </>
                     )}
                 </div>
             </div>
