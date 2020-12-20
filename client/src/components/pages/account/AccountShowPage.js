@@ -1,11 +1,15 @@
 import React from 'react';
 
+import Table from '../../table/Table';
+
 const AccountShowPage = props => {
-    const { first_name, last_name, email, phone_number } = props.currentUser;
+    const { currentUser } = props;
 
     return (
         <>
-            Hello, {first_name}!
+            Hello, {currentUser.first_name}!
+
+            <Table currentUser={currentUser} />
         </>
     );
 };
