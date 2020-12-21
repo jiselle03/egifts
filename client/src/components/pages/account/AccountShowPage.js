@@ -11,9 +11,11 @@ const AccountShowPage = props => {
             Hello, {first_name}!
 
             <Table>
-                <TableRow name="Name" content={`${first_name} ${last_name}`}/>
-                <TableRow name="Email" content={email} />
-                <TableRow name="Phone" content={phone_number} />
+                <tbody>
+                    <TableRow name="Name" content={`${first_name} ${last_name}`}/>
+                    <TableRow name="Email" content={email} />
+                    <TableRow name="Phone" content={phone_number} />
+                </tbody>
             </Table>
         </>
     );
