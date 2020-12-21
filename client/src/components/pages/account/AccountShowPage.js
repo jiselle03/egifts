@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Table from '../../table/Table';
+import TableRow from '../../table/TableRow';
 
 const AccountShowPage = props => {
     const { first_name, last_name, email, phone_number } = props.currentUser;
@@ -10,18 +11,9 @@ const AccountShowPage = props => {
             Hello, {first_name}!
 
             <Table>
-                <tr>
-                    <th>Name</th>
-                    <th>{first_name}{last_name}</th>
-                </tr>
-                <tr>
-                    <th>Email</th>
-                    <th>{email}</th>
-                </tr>
-                <tr>
-                    <th>Phone</th>
-                    <th>{phone_number}</th>
-                </tr>
+                <TableRow name="Name" content={`${first_name} ${last_name}`}/>
+                <TableRow name="Email" content={email} />
+                <TableRow name="Phone" content={phone_number} />
             </Table>
         </>
     );
