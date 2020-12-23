@@ -22,7 +22,7 @@ Burger.propTypes = {
 export default Burger;
 
 const StyledBurger = styled.button`
-  position: absolute;
+  position: ${({ open }) => open ? "fixed" : "absolute"};
   top: 5%;
   left: 2rem;
   display: flex;
