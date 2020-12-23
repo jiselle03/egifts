@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { bool, func, object } from 'prop-types';
 
@@ -15,14 +14,14 @@ const Menu = props => {
                 <div>
                     {currentUser && (
                       <>
-                        <Link to="/account"><Button>Account</Button></Link>
+                        <Button as="a" href="/account">Account</Button>
                         <Button onClick={handleSignOut}>Sign Out</Button>
                       </>
                     )}
                     {!currentUser && (
                       <>
-                          <Link to="/sign-in"><Button>Sign In</Button></Link>
-                          <Link to="/sign-up"><Button>Sign Up</Button></Link>
+                          <Button as="a" href="/sign-in">Sign In</Button>
+                          <Button as="a" href="/sign-up">Sign Up</Button>
                       </>
                     )}
                 </div>
@@ -80,11 +79,6 @@ const StyledMenu = styled.nav`
     margin: 1rem;
   }
 
-  h2 {
-    text-transform: uppercase;
-    
-  }
-
   h2, ul {
     margin: 1rem 1.5rem 0rem 1.5rem;
     padding: 0;
@@ -95,7 +89,7 @@ const StyledMenu = styled.nav`
     line-height: 2.5rem;
   }
 
-  a {
+  li > a {
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
