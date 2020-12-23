@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
 import { bool, func, object } from 'prop-types';
 
@@ -29,9 +31,9 @@ const Menu = props => {
 
             <h2>Categories</h2>
             <ul>
-                <li><a href="/entertainment">Entertainment</a></li>
-                <li><a href="/food-and-drinks">Food & Drinks</a></li>
-                <li><a href="/health-and-beauty">Health & Beauty</a></li>
+                <li><Link to="/entertainment">Entertainment</Link></li>
+                <li><Link to="/food-and-drinks">Food & Drinks</Link></li>
+                <li><Link to="/health-and-beauty">Health & Beauty</Link></li>
             </ul>
         </StyledMenu>
         
