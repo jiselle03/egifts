@@ -3,7 +3,7 @@ import { bool, func, object } from 'prop-types';
 
 import Burger from './Burger';
 import Menu from './Menu';
-import useOnClickOutside from './hooks';
+import useOnClickOutside from '../../global/hooks';
 
 const Header = props => {
     const { open, setOpen, currentUser, onSignOut } = props; 
