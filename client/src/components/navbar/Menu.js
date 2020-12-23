@@ -29,7 +29,7 @@ const Menu = props => {
           </div>
 
           <div>
-            <h2>Categories</h2>
+            <h3>Categories</h3>
             <ul>
                 <li><Link to="/entertainment">Entertainment</Link></li>
                 <li><Link to="/food-and-drinks">Food & Drinks</Link></li>
@@ -85,7 +85,7 @@ const StyledMenu = styled.nav`
     margin: 1rem;
   }
 
-  h2, ul {
+  h3, ul {
     margin: 1rem 1.5rem 0rem 1.5rem;
     padding: 0;
   }
@@ -96,7 +96,7 @@ const StyledMenu = styled.nav`
   }
 
   li > a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.25rem;
