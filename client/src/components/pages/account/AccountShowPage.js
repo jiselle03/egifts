@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Table, TableRow, TableHeader } from '../../Table';
-import { Title, Text } from '../../Typography';
+import { Table, TableRow } from '../../Table';
+import { Title } from '../../Typography';
 
 const AccountShowPage = props => {
     const { first_name, last_name, email, phone_number } = props.currentUser;
