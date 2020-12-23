@@ -20,12 +20,20 @@ const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
+  h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+  }
+
   h1 {
     font-size: 3rem;
   }
 
   h2 {
     font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
   }
   `;
 
