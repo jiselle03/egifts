@@ -8,7 +8,6 @@ const Button = styled.button`
     padding: 1rem;
     background: ${({ theme, primary }) => primary ? theme.accent : theme.background};
     color: ${({ theme }) => theme.primary};
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 0.75rem;
     letter-spacing: 0.1rem;

@@ -43,6 +43,10 @@ const GlobalStyles = createGlobalStyle`
   p, a {
     font-size: 1rem;
   }
+
+  a {
+    text-decoration: none;
+  }  
   `;
 
 GlobalStyles.propTypes = {
