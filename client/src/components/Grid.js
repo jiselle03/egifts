@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Grid = styled.div`
+export const Grid = styled.div`
     display: grid;
     gap: 1rem;
 
@@ -13,4 +13,13 @@ const Grid = styled.div`
     }
 `;
 
-export default Grid;
+export const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: 1px solid ${({ theme }) => theme.secondary};
+
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.primary};
+    }
+`;

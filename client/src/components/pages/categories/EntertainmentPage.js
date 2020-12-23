@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import Store from '../../../api/store';
 import Utils from './utils';
 
-import Card from '../../grid/Card';
-import Grid from '../../grid/Grid';
+import { Card, Grid } from '../../Grid';
 
 const EntertainmentPage = () => {
     const { filterStores } = Utils;

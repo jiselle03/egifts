@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Store from '../../api/store';
 
-import Card from '../grid/Card';
-import Grid from '../grid/Grid';
+import { Card, Grid } from '../Grid';
 
 const WelcomePage = () => {
     const [stores, setStores] = useState([]);
