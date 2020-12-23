@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import Store from '../../api/store';
 
+import { Text } from '../Typography';
+
 const StoreShowPage = props => {
     const [store, setStore] = useState({});
 
@@ -10,7 +12,7 @@ const StoreShowPage = props => {
     }, []);
 
     return (
-        <>{store.name}</>
+        <Text>{store.name}</Text>
     );
 };
 
