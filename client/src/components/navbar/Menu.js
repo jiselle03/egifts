@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { bool, func, object } from 'prop-types';
 
+import { Title } from '../Typography';
 import Button from '../Button';
 
 const Menu = props => {
@@ -11,7 +12,7 @@ const Menu = props => {
     return (
       <StyledMenu open={open}>
           <div>
-              <h1>eGifts</h1>
+              <Title>eGifts</Title>
               <div>
                   {currentUser && (
                     <>
