@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 import { bool, func, object } from 'prop-types';
 
@@ -10,33 +9,34 @@ const Menu = props => {
     const { open, currentUser, handleSignOut } = props;
 
     return (
-        <StyledMenu open={open}>
-            <div>
-                <h1>eGifts</h1>
-                <div>
-                    {currentUser && (
-                      <>
-                        <Button as="a" href="/account">Account</Button>
-                        <Button onClick={handleSignOut}>Sign Out</Button>
-                      </>
-                    )}
-                    {!currentUser && (
-                      <>
-                          <Button as="a" href="/sign-in">Sign In</Button>
-                          <Button as="a" href="/sign-up">Sign Up</Button>
-                      </>
-                    )}
-                </div>
-            </div>
+      <StyledMenu open={open}>
+          <div>
+              <h1>eGifts</h1>
+              <div>
+                  {currentUser && (
+                    <>
+                      <Button as="a" href="/account">Account</Button>
+                      <Button onClick={handleSignOut}>Sign Out</Button>
+                    </>
+                  )}
+                  {!currentUser && (
+                    <>
+                        <Button as="a" href="/sign-in">Sign In</Button>
+                        <Button as="a" href="/sign-up">Sign Up</Button>
+                    </>
+                  )}
+              </div>
+          </div>
 
+          <div>
             <h2>Categories</h2>
             <ul>
                 <li><Link to="/entertainment">Entertainment</Link></li>
                 <li><Link to="/food-and-drinks">Food & Drinks</Link></li>
                 <li><Link to="/health-and-beauty">Health & Beauty</Link></li>
             </ul>
-        </StyledMenu>
-        
+          </div>
+      </StyledMenu> 
     )
 };
 
@@ -66,11 +66,15 @@ const StyledMenu = styled.nav`
     width: 100%;
   }
 
-  div {
+  > div:first-child {
     background: ${({ theme }) => theme.accent};
   }
 
-  div div {
+  > div:last-child {
+    padding: 1rem;
+  }
+
+  div > div {
     display: flex;
     justify-content: center;
   }
