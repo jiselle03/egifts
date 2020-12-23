@@ -13,7 +13,8 @@ const Menu = props => {
     return (
       <StyledMenu open={open}>
           <div>
-              <Title>eGifts</Title>
+              <Link to="/"><Title>eGifts</Title></Link>
+              
               <Flex justify="center">
                   {currentUser && (
                     <>
