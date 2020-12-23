@@ -4,8 +4,7 @@ import { func } from 'prop-types';
 
 import Session from '../../../api/session';
 
-import Form from '../../form/Form';
-import Input from '../../form/Input';
+import { Form, Input } from '../../Form';
 import Button from '../../Button';
 
 const SignInPage = props => {
