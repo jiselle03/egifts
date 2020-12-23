@@ -1,5 +1,7 @@
 import React from 'react';
 
-const NotFoundPage = () => (<h2>404 Not Found</h2>);
+import Title from '../typography/Title';
+
+const NotFoundPage = () => (<Title as="h2">404 Not Found</Title>);
 
 export default NotFoundPage;
