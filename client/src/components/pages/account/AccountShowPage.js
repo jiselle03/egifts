@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Table from '../../table/Table';
-import TableRow from '../../table/TableRow';
+import { Table, TableRow, TableHeader } from '../../Table';
 import { Title, Text } from '../../Typography';
 
 const AccountShowPage = props => {
@@ -9,12 +8,10 @@ const AccountShowPage = props => {
 
     return (
         <>
-            <Text>Hello, {first_name}!</Text>
+            <Title as="h4">Hello, {first_name}!</Title>
 
+            <Title as="h3">Profile</Title>
             <Table>
-                <thead>
-                    <Title as="h3">Profile</Title>
-                </thead>
                 <tbody>
                     <TableRow name="Name" content={`${first_name} ${last_name}`}/>
                     <TableRow name="Email" content={email} />
@@ -22,16 +19,12 @@ const AccountShowPage = props => {
                 </tbody>
             </Table>
 
+            <Title as="h3">Gifts</Title>
             <Table>
-                <thead>
-                <Title as="h3">Gifts</Title>
-                </thead>
             </Table>
 
+            <Title as="h3">Purchases</Title>
             <Table>
-                <thead>
-                    <Title as="h3">Purchases</Title>
-                </thead>
             </Table>
         </>
     );
