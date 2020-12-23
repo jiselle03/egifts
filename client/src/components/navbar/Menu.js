@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { bool, func, object } from 'prop-types';
 
 import { Title } from '../Typography';
+import Flex from '../Flex';
 import Button from '../Button';
 
 const Menu = props => {
@@ -13,7 +14,7 @@ const Menu = props => {
       <StyledMenu open={open}>
           <div>
               <Title>eGifts</Title>
-              <div>
+              <Flex justify="center">
                   {currentUser && (
                     <>
                       <Button as="a" href="/account">Account</Button>
@@ -26,7 +27,7 @@ const Menu = props => {
                         <Button as="a" href="/sign-up">Sign Up</Button>
                     </>
                   )}
-              </div>
+              </Flex>
           </div>
 
           <div>
@@ -73,11 +74,6 @@ const StyledMenu = styled.nav`
 
   > div:last-child {
     padding: 1rem;
-  }
-
-  div > div {
-    display: flex;
-    justify-content: center;
   }
 
   h1 {
