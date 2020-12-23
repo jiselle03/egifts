@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { object } from 'prop-types';
 
 export const Grid = styled.div`
     display: grid;
@@ -13,6 +14,10 @@ export const Grid = styled.div`
     }
 `;
 
+Grid.propTypes = {
+    theme: object,
+};
+
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
@@ -23,3 +28,7 @@ export const Card = styled.div`
         color: ${({ theme }) => theme.primary};
     }
 `;
+
+Card.propTypes = {
+    theme: object,
+};

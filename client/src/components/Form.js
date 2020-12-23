@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { bool } from 'prop-types';
 
 export const Form = styled.form`
     max-width: 600px;
@@ -12,3 +13,7 @@ export const Input = styled.input`
     height: 40px;
     margin: 0.5rem;
 `;
+
+Input.propTypes = {
+    half: bool,
+};

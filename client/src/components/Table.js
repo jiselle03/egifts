@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { string } from 'prop-types';
 
 export const Table = styled.table`
     width: calc(100% - 2rem);
@@ -15,6 +16,11 @@ export const TableRow = props => {
             <TableData>{content}</TableData>
         </tr>
     );
+};
+
+TableRow.propTypes = {
+    name: string.isRequired,
+    content: string.isRequired,
 };
 
 const TableHeader = styled.th`

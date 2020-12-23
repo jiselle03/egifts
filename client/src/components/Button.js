@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { bool, object } from 'prop-types';
 
 const Button = styled.button`
     border: none;
@@ -14,5 +15,10 @@ const Button = styled.button`
     cursor: pointer;
     float: right;
 `;
+
+Button.propTypes = {
+    primary: bool,
+    theme: object,
+};
 
 export default Button;
