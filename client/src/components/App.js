@@ -8,7 +8,7 @@ import AuthRoute from './AuthRoute';
 import Container from './Container';
 import LoadingCircle from './LoadingCircle';
 import Header from './navbar/Header';
-import Title from './typography/Title';
+import { Title } from './Typography';
 
 import WelcomePage from './pages/WelcomePage';
 import SignInPage from './pages/account/SignInPage';

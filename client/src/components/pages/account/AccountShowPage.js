@@ -2,8 +2,7 @@ import React from 'react';
 
 import Table from '../../table/Table';
 import TableRow from '../../table/TableRow';
-import Title from '../../typography/Title';
-import Text from '../../typography/Text';
+import { Title, Text } from '../../Typography';
 
 const AccountShowPage = props => {
     const { first_name, last_name, email, phone_number } = props.currentUser;
