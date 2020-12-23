@@ -8,7 +8,7 @@ import AuthRoute from './AuthRoute';
 import Container from './Container';
 import LoadingCircle from './LoadingCircle';
 import Header from './navbar/Header';
-import Title from './Title';
+import Title from './typography/Title';
 
 import WelcomePage from './pages/WelcomePage';
 import SignInPage from './pages/account/SignInPage';
@@ -47,7 +47,7 @@ const App = () => {
       <BrowserRouter>
         <GlobalStyles open={open} />
         
-        <Title>eGifts</Title>
+        <Title align="right">eGifts</Title>
 
         <Header 
           open={open}
