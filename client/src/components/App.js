@@ -18,6 +18,7 @@ import EntertainmentPage from './pages/categories/EntertainmentPage';
 import FoodDrinksPage from './pages/categories/FoodDrinksPage';
 import HealthBeautyPage from './pages/categories/HealthBeautyPage';
 import StoreShowPage from './pages/StoreShowPage';
+import ItemShowPage from './pages/ItemShowPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import { ThemeProvider } from 'styled-components';
@@ -75,7 +76,8 @@ const App = () => {
             <Route path='/entertainment' component={EntertainmentPage} />
             <Route path='/food-and-drinks' component={FoodDrinksPage} />
             <Route path='/health-and-beauty' component={HealthBeautyPage} />
-            <Route path='/stores/:id' component={StoreShowPage} />
+            <Route exact path='/stores/:id' component={StoreShowPage} />
+            <Route exact path='/stores/:store_id/items/:id' component={ItemShowPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </Container>
