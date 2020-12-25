@@ -56,7 +56,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   background: ${({ theme }) => theme.background};
   height: 100vh;
-  width: ${({ theme }) => theme.drawer};
+  width: 100vw;
   text-align: left;
   position: absolute;
   top: 0;
@@ -66,8 +66,8 @@ const StyledMenu = styled.nav`
   background-color: ${({ theme }) => theme.secondary};
   position: fixed;
   
-  @media screen and (max-width: ${({ theme }) => theme.medium}) {
-    width: 100vw;
+  @media screen and (min-width: ${({ theme }) => theme.medium}) {
+    width: ${({ theme }) => theme.drawer};;
   }
 
   > div:first-child {
@@ -95,15 +95,15 @@ const StyledMenu = styled.nav`
   }
 
   li > a {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.25rem;
     color: ${({ theme }) => theme.primary};
     transition: color 0.3s linear;
     
-    @media screen and (max-width: ${({ theme }) => theme.medium}) {
-      font-size: 1.5rem;
+    @media screen and (min-width: ${({ theme }) => theme.medium}) {
+      font-size: 1.1rem;
     }
 
     &:hover {
