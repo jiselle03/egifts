@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { object } from 'prop-types';
 
 import Icon from './Icon';
 import Flex from './Flex';
@@ -29,3 +30,7 @@ const ShortcutBar = styled.div`
         display: none;
     }
 `;
+
+ShortcutBar.propTypes = {
+    theme: object,
+  };
