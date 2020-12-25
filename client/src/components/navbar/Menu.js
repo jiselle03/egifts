@@ -66,8 +66,8 @@ const StyledMenu = styled.nav`
   background-color: ${({ theme }) => theme.secondary};
   position: fixed;
   
-  @media (max-width: ${({ theme }) => theme.medium}) {
-    width: 100%;
+  @media screen and (max-width: ${({ theme }) => theme.medium}) {
+    width: 100vw;
   }
 
   > div:first-child {
@@ -102,7 +102,7 @@ const StyledMenu = styled.nav`
     color: ${({ theme }) => theme.primary};
     transition: color 0.3s linear;
     
-    @media (max-width: ${({ theme }) => theme.medium}) {
+    @media screen and (max-width: ${({ theme }) => theme.medium}) {
       font-size: 1.5rem;
     }
 

@@ -47,6 +47,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }  
+
+  @media screen and (max-width: ${({ theme }) => theme.medium}) {
+    max-width: 100vw;
+  }
+
   `;
 
 GlobalStyles.propTypes = {
