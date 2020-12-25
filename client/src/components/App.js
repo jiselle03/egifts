@@ -9,6 +9,7 @@ import Container from './Container';
 import LoadingCircle from './LoadingCircle';
 import Header from './navbar/Header';
 import { Title } from './Typography';
+import Shortcuts from './Shortcuts';
 
 import WelcomePage from './pages/WelcomePage';
 import SignInPage from './pages/account/SignInPage';
@@ -81,6 +82,8 @@ const App = () => {
             <Route component={NotFoundPage} />
           </Switch>
         </Container>
+
+        <Shortcuts />
       </BrowserRouter>
     </ThemeProvider>
   );
