@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { object } from 'prop-types';
 
@@ -9,10 +10,10 @@ const Shortcuts = () => {
     return (
         <ShortcutBar>
             <Flex justify="space-between">
-                <Icon type="home" />
+                <Link to="/"><Icon type="home" /></Link>
                 <Icon type="star" />
                 <Icon type="wallet" />
-                <Icon type="user" />
+                <Link to="/account"><Icon type="user" /></Link>
             </Flex>
         </ShortcutBar>
     );
