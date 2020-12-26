@@ -40,6 +40,8 @@ const App = () => {
 
   const destroySession = () => Session.destroy().then(setCurrentUser(null));
 
+  const closeMenu = () => setOpen(false);
+
   useEffect(() => getUser(), [getUser]);
 
   if (isLoading) return (<LoadingCircle />);
@@ -56,6 +58,7 @@ const App = () => {
           setOpen={setOpen}
           currentUser={currentUser} 
           onSignOut={destroySession} 
+          handleClose={closeMenu}
         />
 
         <Container open={open}>

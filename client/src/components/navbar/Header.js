@@ -6,7 +6,7 @@ import Menu from './Menu';
 import useOnClickOutside from '../../global/hooks';
 
 const Header = props => {
-    const { open, setOpen, currentUser, onSignOut } = props; 
+    const { open, setOpen, currentUser, onSignOut, handleClose } = props; 
 
     const node = useRef(); 
 
@@ -15,7 +15,7 @@ const Header = props => {
     return (
         <header ref={node}>
             <Burger open={open} setOpen={setOpen} />
-            <Menu open={open} currentUser={currentUser} handleSignOut={onSignOut} />
+            <Menu open={open} currentUser={currentUser} handleSignOut={onSignOut} handleClose={handleClose} />
         </header>
     );
 };

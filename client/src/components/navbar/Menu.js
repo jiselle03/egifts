@@ -8,8 +8,8 @@ import Flex from '../Flex';
 import Button from '../Button';
 
 const Menu = props => {
-    const { open, currentUser, handleSignOut } = props;
-
+    const { open, currentUser, handleSignOut, handleClose } = props;
+    
     return (
       <StyledMenu open={open}>
           <MenuHeader>
@@ -34,9 +34,9 @@ const Menu = props => {
           <MenuBody>
             <Title as="h3">Categories</Title>
             <ul>
-                <li><Link to="/entertainment">Entertainment</Link></li>
-                <li><Link to="/food-and-drinks">Food & Drinks</Link></li>
-                <li><Link to="/health-and-beauty">Health & Beauty</Link></li>
+                <li onClick={() => handleClose()}><Link to="/entertainment">Entertainment</Link></li>
+                <li onClick={() => handleClose()}><Link to="/food-and-drinks">Food & Drinks</Link></li>
+                <li onClick={() => handleClose()}><Link to="/health-and-beauty">Health & Beauty</Link></li>
             </ul>
           </MenuBody>
       </StyledMenu> 
