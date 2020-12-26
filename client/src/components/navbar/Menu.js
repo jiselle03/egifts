@@ -12,7 +12,7 @@ const Menu = props => {
 
     return (
       <StyledMenu open={open}>
-          <div>
+          <MenuHeader>
               <Link to="/"><Title>eGifts</Title></Link>
 
               <Flex justify="center">
@@ -29,16 +29,16 @@ const Menu = props => {
                     </>
                   )}
               </Flex>
-          </div>
+          </MenuHeader>
 
-          <div>
-            <h3>Categories</h3>
+          <MenuBody>
+            <Title as="h3">Categories</Title>
             <ul>
                 <li><Link to="/entertainment">Entertainment</Link></li>
                 <li><Link to="/food-and-drinks">Food & Drinks</Link></li>
                 <li><Link to="/health-and-beauty">Health & Beauty</Link></li>
             </ul>
-          </div>
+          </MenuBody>
       </StyledMenu> 
     )
 };
@@ -52,8 +52,6 @@ Menu.propTypes = {
 export default Menu;
 
 const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
   background: ${({ theme }) => theme.background};
   height: 100vh;
   width: 100vw;
@@ -70,18 +68,9 @@ const StyledMenu = styled.nav`
     width: ${({ theme }) => theme.drawer};;
   }
 
-  > div:first-child {
-    background: ${({ theme }) => theme.accent};
-  }
-
-  > div:last-child {
-    padding: 1rem;
-  }
-
   h1 {
     color: ${({ theme }) => theme.background};
     text-align: right;
-    margin: 1rem;
   }
 
   h3, ul {
@@ -116,3 +105,11 @@ Menu.propTypes = {
   theme: object,
   open: bool.isRequired,
 };
+
+const MenuHeader = styled.div`
+  background-color: ${({ theme }) => theme.accent};
+`;
+
+const MenuBody = styled.div`
+  padding: 1rem;
+`;

@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import { string } from 'prop-types';
 
 export const Title = styled.h1`
-    display: block;
-    margin: 1rem;
-    margin-right: 2rem;
+    margin: 0;
+    padding: 1rem 2rem;
     text-align: ${({ align }) => align};
 `;
 
