@@ -6,10 +6,11 @@ import { bool, func, object } from 'prop-types';
 import { Title } from '../Typography';
 import Flex from '../Flex';
 import Button from '../Button';
+import { categories } from '../../global/Content';
 
 const Menu = props => {
     const { open, currentUser, handleSignOut, handleClose } = props;
-    
+
     return (
       <StyledMenu open={open}>
           <MenuHeader>
@@ -34,9 +35,11 @@ const Menu = props => {
           <MenuBody>
             <Title as="h3">Categories</Title>
             <ul>
-                <li onClick={() => handleClose()}><Link to="/entertainment">Entertainment</Link></li>
-                <li onClick={() => handleClose()}><Link to="/food-and-drinks">Food & Drinks</Link></li>
-                <li onClick={() => handleClose()}><Link to="/health-and-beauty">Health & Beauty</Link></li>
+                {categories.map(category => (
+                  <li key={category.name} onClick={() => handleClose()}>
+                    <Link to={`/${category.link}`}>{category.name}</Link>
+                  </li>
+                ))}
             </ul>
           </MenuBody>
       </StyledMenu> 
