@@ -5,6 +5,7 @@ import Store from '../../../api/store';
 import Utils from '../../../global/utils';
 
 import { Card, Grid } from '../../Grid';
+import { Title } from '../../Typography';
 
 const HealthBeautyPage = () => {
     const { filterStores } = Utils;
@@ -15,15 +16,19 @@ const HealthBeautyPage = () => {
     }, []);
 
     return (
-        <Grid>
-            {stores.map(store => (
-                <Card key={store.id}>
-                    <Link key={store.id} to={`/stores/${store.id}`}>
-                        {store.name}
-                    </Link>
-                </Card>
-            ))}
-        </Grid>
+        <>
+            <Title as="h3">Health & Beauty</Title>
+
+            <Grid>
+                {stores.map(store => (
+                    <Card key={store.id}>
+                        <Link key={store.id} to={`/stores/${store.id}`}>
+                            {store.name}
+                        </Link>
+                    </Card>
+                ))}
+            </Grid>
+        </>
     );
 };
 
