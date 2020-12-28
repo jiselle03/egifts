@@ -6,7 +6,7 @@ import { bool, func, object } from 'prop-types';
 import { Title } from '../Typography';
 import Flex from '../Flex';
 import Button from '../Button';
-import { categories } from '../../global/Content';
+import { categories } from '../../global/content';
 
 const Menu = props => {
     const { open, currentUser, handleSignOut, handleClose } = props;
