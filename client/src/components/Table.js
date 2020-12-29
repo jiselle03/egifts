@@ -5,6 +5,7 @@ export const Table = styled.table`
     width: calc(100% - 2rem);
     border: 1px solid #f3f3f3;
     margin: 2rem;
+    padding: 2rem;
 `;
 
 export const TableRow = props => {
