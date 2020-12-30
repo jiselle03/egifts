@@ -25,6 +25,11 @@ const AccountShowPage = props => {
                 </tbody>
             </Table>
 
+            <Title as="h3">Security</Title>
+            <Table as="div">
+                Update your password <Link to="/account/security/edit">here</Link>.
+            </Table>
+
             <Title as="h3">Gifts</Title>
             <Table>
             </Table>
