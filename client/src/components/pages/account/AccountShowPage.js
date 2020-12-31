@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Table, TableRow } from '../../Table';
-import { Title, Text } from '../../Typography';
+import { Title } from '../../Typography';
 import Flex from '../../Flex';
 
 const AccountShowPage = props => {
