@@ -15,6 +15,8 @@ import WelcomePage from './pages/WelcomePage';
 import SignInPage from './pages/account/SignInPage';
 import SignUpPage from './pages/account/SignUpPage';
 import AccountShowPage from './pages/account/AccountShowPage';
+import AccountEditPage from './pages/account/AccountEditPage';
+import AccountSecurityEditPage from './pages/account/AccountSecurityEditPage';
 import EntertainmentPage from './pages/categories/EntertainmentPage';
 import FoodDrinksPage from './pages/categories/FoodDrinksPage';
 import HealthBeautyPage from './pages/categories/HealthBeautyPage';
@@ -76,6 +78,16 @@ const App = () => {
               exact path='/account'
               isAuthenticated={!!currentUser}
               render={routeProps => <AccountShowPage {...routeProps} currentUser={currentUser} />}
+            />
+            <AuthRoute 
+              exact path='/account/edit'
+              isAuthenticated={!!currentUser}
+              render={routeProps => <AccountEditPage {...routeProps} currentUser={currentUser} onUpdateUser={getUser} />}
+            />
+            <AuthRoute 
+              exact path='/account/security/edit'
+              isAuthenticated={!!currentUser}
+              render={routeProps => <AccountSecurityEditPage {...routeProps} currentUser={currentUser} />}
             />
             <Route path='/entertainment' component={EntertainmentPage} />
             <Route path='/food-and-drinks' component={FoodDrinksPage} />
