@@ -17,3 +17,6 @@ export const Input = styled.input`
 Input.propTypes = {
     half: bool,
 };
+
+export const Label = styled.label`
+`;
