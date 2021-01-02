@@ -12,6 +12,8 @@ Rails.application.routes.draw do
           resources :transactions, shallow: true, only: [:create]
         end
       end
+
+      patch('/users/:id/password/edit', { to: 'users#update_password', as: 'update_password'})
     end
   end
 end
