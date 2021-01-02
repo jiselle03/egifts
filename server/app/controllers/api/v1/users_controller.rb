@@ -53,19 +53,19 @@ class Api::V1::UsersController < ApplicationController
                         message: "Your password has been successfully updated."
                     }
                 else 
-                    json: { 
+                    render json: { 
                         message: "Password update failed. Please try again."
                     },
                     status: 422
                 end
             else
-                json: { 
+                render json: { 
                     message: "Your password and password confirmation must match." 
                 },
                 status: 422
             end
         else
-            json: {
+            render json: {
                 message: "Your current password does not match our records."
             },
             status: 422
