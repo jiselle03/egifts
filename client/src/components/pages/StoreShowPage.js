@@ -21,6 +21,7 @@ const StoreShowPage = props => {
                     <Link to={`/stores/${store.id}/items/${item.id}`} key={item.id}>
                         <Card>
                             <Text>{item.name}</Text>
+                            <Text>{item.description}</Text>
                             <Text>${item.price}</Text>
                         </Card>
                     </Link>
