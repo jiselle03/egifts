@@ -87,7 +87,7 @@ const App = () => {
             <AuthRoute 
               exact path='/account/security/edit'
               isAuthenticated={!!currentUser}
-              render={routeProps => <AccountSecurityEditPage {...routeProps} currentUser={currentUser} />}
+              render={routeProps => <AccountSecurityEditPage {...routeProps} currentUser={currentUser} onUpdateUser={getUser} />}
             />
             <Route path='/entertainment' component={EntertainmentPage} />
             <Route path='/food-and-drinks' component={FoodDrinksPage} />
