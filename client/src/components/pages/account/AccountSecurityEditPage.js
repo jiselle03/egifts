@@ -8,7 +8,7 @@ import Button from '../../Button';
 
 const AccountSecurityEditPage = props => {
     const { onUpdateUser, history } = props;
-    const { id, first_name, last_name, email, phone_number } = props.currentUser;
+    const { id } = props.currentUser;
 
     const updateUser = event => {
         event.preventDefault();
