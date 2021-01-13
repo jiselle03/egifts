@@ -12,5 +12,9 @@ Title.propTypes = {
 };
 
 export const Text = styled.p`
-    
+    text-align: ${({ align }) => align};
 `;
+
+Text.propTypes = {
+    align: string,
+};
