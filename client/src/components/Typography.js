@@ -18,3 +18,6 @@ export const Text = styled.p`
 Text.propTypes = {
     align: string,
 };
+
+export const Small = styled.small`
+`;
