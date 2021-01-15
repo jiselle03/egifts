@@ -18,13 +18,13 @@ const StoreShowPage = props => {
             <Text>{store.name}</Text>
             <Grid>
                 {store && store.items && store.items.map(item => 
-                    <Link to={`/stores/${store.id}/items/${item.id}`} key={item.id}>
-                        <Card>
+                    <Card>
+                        <Link to={`/stores/${store.id}/items/${item.id}`} key={item.id}>
                             <Text>{item.name}</Text>
                             <Text>{item.description}</Text>
                             <Text>${item.price}</Text>
-                        </Card>
-                    </Link>
+                        </Link>
+                    </Card>
                 )}
             </Grid>
         </>
