@@ -23,10 +23,15 @@ export const Card = styled.div`
     flex-direction: column;
     border: 1px solid ${({ theme }) => theme.secondary};
     padding: 1rem;
+    border-radius: 5px;
 
     a {
         text-decoration: none;
         color: ${({ theme }) => theme.primary};
+    }
+
+    &:hover {
+        box-shadow: 3px 3px 3px 3px #f3f3f3;
     }
 `;
 
