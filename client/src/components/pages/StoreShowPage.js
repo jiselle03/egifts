@@ -5,6 +5,7 @@ import Store from '../../api/store';
 
 import { Text } from '../Typography';
 import { Grid, Card } from '../Grid';
+import Button from '../Button';
 
 const StoreShowPage = props => {
     const [store, setStore] = useState({});
@@ -24,6 +25,7 @@ const StoreShowPage = props => {
                             <Text>{item.description}</Text>
                             <Text>${item.price}</Text>
                         </Link>
+                        <Button primary>Add to Cart</Button>
                     </Card>
                 )}
             </Grid>
