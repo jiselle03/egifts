@@ -9,6 +9,12 @@ import Button from '../Button';
 
 const StoreShowPage = props => {
     const [store, setStore] = useState({});
+    const [cart, setCart] = useState([]);
+
+    const addToCart = (event, item) => {
+        event.preventDefault();
+        setCart([...cart, { item }]);
+    };
 
     useEffect(() => {
         Store.one(props.match.params.id).then(store => setStore(store));
@@ -25,7 +31,7 @@ const StoreShowPage = props => {
                             <Text>{item.description}</Text>
                             <Text>${item.price}</Text>
                         </Link>
-                        <Button primary>Add to Cart</Button>
+                        <Button primary onClick={event => addToCart(event, item)}>Add to Cart</Button>
                     </Card>
                 )}
             </Grid>
