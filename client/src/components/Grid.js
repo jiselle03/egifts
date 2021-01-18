@@ -21,6 +21,8 @@ Grid.propTypes = {
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     border: 1px solid ${({ theme }) => theme.secondary};
     padding: 1rem;
     border-radius: 5px;
