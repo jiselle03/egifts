@@ -13,7 +13,14 @@ const StoreShowPage = props => {
 
     const addToCart = (event, item) => {
         event.preventDefault();
-        setCart([...cart, { item }]);
+        item.quantity = 1;
+        cart.map(content => {
+            if (content.id === item.id) {
+                content.quantity += 1;
+                return cart;
+            };
+        });
+        setCart([...cart, item]);
     };
 
     useEffect(() => {
